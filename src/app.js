@@ -26,7 +26,6 @@ const messages= []
 io.on('connect', socket => {
     console.log('nuevo cliente conectado')
     socket.on('message', data => {
-
         messages.push(data)
         io.emit('messagesLogs', messages)
     })
