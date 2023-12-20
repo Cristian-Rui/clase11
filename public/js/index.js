@@ -21,7 +21,9 @@ inputData.addEventListener('keyup', (event) => {
     if (event.key === 'Enter') {
         if (!!inputData.value.trim()) {
             socket.emit('message', { user: userName, data: inputData.value })
+            
         }
+        inputData.value = '';
     }
 })
 
